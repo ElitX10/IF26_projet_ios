@@ -12,6 +12,7 @@
 		0DDE2C1021B6CD7B00C70B7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DDE2C0F21B6CD7B00C70B7E /* Assets.xcassets */; };
 		0DDE2C1321B6CD7B00C70B7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DDE2C1121B6CD7B00C70B7E /* LaunchScreen.storyboard */; };
 		0DDE2C1B21C2B8CF00C70B7E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE2C1A21C2B8CF00C70B7E /* MapViewController.swift */; };
+		0DDE2C7921C942AC00C70B7E /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE2C7821C942AC00C70B7E /* DataBaseHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0DDE2C1221B6CD7B00C70B7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DDE2C1421B6CD7B00C70B7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DDE2C1A21C2B8CF00C70B7E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0DDE2C7821C942AC00C70B7E /* DataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				0DDE2C0F21B6CD7B00C70B7E /* Assets.xcassets */,
 				0DDE2C1121B6CD7B00C70B7E /* LaunchScreen.storyboard */,
 				0DDE2C1421B6CD7B00C70B7E /* Info.plist */,
+				0DDE2C7821C942AC00C70B7E /* DataBaseHelper.swift */,
 			);
 			path = if26_projet_ios;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DDE2C1B21C2B8CF00C70B7E /* MapViewController.swift in Sources */,
+				0DDE2C7921C942AC00C70B7E /* DataBaseHelper.swift in Sources */,
 				0DDE2C0921B6CD6400C70B7E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

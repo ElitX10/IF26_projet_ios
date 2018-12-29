@@ -13,10 +13,10 @@ class DataBaseHelper: NSObject {
     let DATABASE_NAME = "pokeappdb";
     
     // nom des tables de la BDD :
-    public static let DRESSEUR_TABLE = Table("dresseur");
-    public static let POKEMON_TABLE = Table("pokemon");
-    public static let POKESTOP_TABLE = Table("pokestop");
-    public static let LOCALISATION_TABLE = Table("localisation");
+    public let DRESSEUR_TABLE = Table("dresseur");
+    public let POKEMON_TABLE = Table("pokemon");
+    public let POKESTOP_TABLE = Table("pokestop");
+    public let LOCALISATION_TABLE = Table("localisation");
     
     // nom colonnes table dresseur :
     public static let ID_DRESSEUR = Expression<Int>("id");
@@ -42,37 +42,6 @@ class DataBaseHelper: NSObject {
     public static let ID_POKESTOP_LOCALISATION = Expression<Int>("pokestop_id");
     public static let TIME_LOCALISATION = Expression<String>("time");
     
-    // commandes de création des tables :
-    let CREATE_DRESSEUR_TABLE = DRESSEUR_TABLE.create(ifNotExists: true){ table in
-        table.column(ID_DRESSEUR, primaryKey: .autoincrement)
-        table.column(PSEUDO_DRESSEUR, unique: true)
-        table.column(MOT_DE_PASSE_DRESSEUR)
-    }
-    
-    let CREATE_POKEMON_TABLE = POKEMON_TABLE.create(ifNotExists: true){ table in
-        table.column(ID_POKEMON, primaryKey: true)
-        table.column(NOM_POKEMON, unique: true)
-    }
-    
-    let CREATE_POKESTOP_TABLE = POKESTOP_TABLE.create(ifNotExists: true){ table in
-        table.column(ID_POKESTOP, primaryKey: .autoincrement)
-        table.column(NOM_POKESTOP)
-        table.column(IS_GYM_POKESTOP, defaultValue: false)
-        table.column(LATITUDE_POKESTOP)
-        table.column(LONGITUDE_POKESTOP)
-        table.column(ID_DRESSEUR_POKESTOP, references: DRESSEUR_TABLE, ID_DRESSEUR)
-    }
-    
-    let CREATE_LOCALISATION_TABLE = LOCALISATION_TABLE.create(ifNotExists: true){ table in
-        table.column(ID_LOCALISATION, primaryKey: .autoincrement)
-        table.column(ID_POKEMON_LOCALISATION)
-        table.column(ID_DRESSEUR_LOCALISATION)
-        table.column(ID_POKESTOP_LOCALISATION)
-        table.column(TIME_LOCALISATION)
-        table.foreignKey(ID_POKEMON_LOCALISATION, references: POKEMON_TABLE, ID_DRESSEUR)
-        table.foreignKey(ID_DRESSEUR_LOCALISATION, references: DRESSEUR_TABLE, ID_DRESSEUR)
-        table.foreignKey(ID_POKESTOP_LOCALISATION, references: POKESTOP_TABLE, ID_POKESTOP, delete: .cascade)
-    }
     
     var dataBase: Connection!
     
@@ -85,7 +54,41 @@ class DataBaseHelper: NSObject {
         }catch {
             print (error)
         }
+
+    }
+    
+    func createTables() {
+        // commandes de création des tables :
+        let CREATE_DRESSEUR_TABLE = DRESSEUR_TABLE.create(ifNotExists: true){ table in
+            table.column(DataBaseHelper.ID_DRESSEUR, primaryKey: .autoincrement)
+            table.column(DataBaseHelper.PSEUDO_DRESSEUR, unique: true)
+            table.column(DataBaseHelper.MOT_DE_PASSE_DRESSEUR)
+        }
         
+        let CREATE_POKEMON_TABLE = POKEMON_TABLE.create(ifNotExists: true){ table in
+            table.column(DataBaseHelper.ID_POKEMON, primaryKey: true)
+            table.column(DataBaseHelper.NOM_POKEMON, unique: true)
+        }
+        
+        let CREATE_POKESTOP_TABLE = POKESTOP_TABLE.create(ifNotExists: true){ table in
+            table.column(DataBaseHelper.ID_POKESTOP, primaryKey: .autoincrement)
+            table.column(DataBaseHelper.NOM_POKESTOP)
+            table.column(DataBaseHelper.IS_GYM_POKESTOP, defaultValue: false)
+            table.column(DataBaseHelper.LATITUDE_POKESTOP)
+            table.column(DataBaseHelper.LONGITUDE_POKESTOP)
+            table.column(DataBaseHelper.ID_DRESSEUR_POKESTOP, references: DRESSEUR_TABLE, DataBaseHelper.ID_DRESSEUR)
+        }
+        
+        let CREATE_LOCALISATION_TABLE = LOCALISATION_TABLE.create(ifNotExists: true){ table in
+            table.column(DataBaseHelper.ID_LOCALISATION, primaryKey: .autoincrement)
+            table.column(DataBaseHelper.ID_POKEMON_LOCALISATION)
+            table.column(DataBaseHelper.ID_DRESSEUR_LOCALISATION)
+            table.column(DataBaseHelper.ID_POKESTOP_LOCALISATION)
+            table.column(DataBaseHelper.TIME_LOCALISATION)
+            table.foreignKey(DataBaseHelper.ID_POKEMON_LOCALISATION, references: POKEMON_TABLE, DataBaseHelper.ID_DRESSEUR)
+            table.foreignKey(DataBaseHelper.ID_DRESSEUR_LOCALISATION, references: DRESSEUR_TABLE, DataBaseHelper.ID_DRESSEUR)
+            table.foreignKey(DataBaseHelper.ID_POKESTOP_LOCALISATION, references: POKESTOP_TABLE, DataBaseHelper.ID_POKESTOP, delete: .cascade)
+        }        
         do{
             try self.dataBase.run(CREATE_DRESSEUR_TABLE)
             try self.dataBase.run(CREATE_POKEMON_TABLE)

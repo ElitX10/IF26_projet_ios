@@ -22,7 +22,6 @@ class MapViewController: UIViewController {
         if pokemonDAO.getAllPokemon().count == 0 {
             pokemonDAO.loadFirstGen()
         }
-        
         // Do any additional setup after loading the view.
     }
     

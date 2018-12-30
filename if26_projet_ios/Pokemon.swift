@@ -34,4 +34,8 @@ class Pokemon {
         self.id = id
     }
     
+    func toString() -> String {
+        return "Pokemon : id -> \(self.id) / nom -> \(self.nom)"
+    }
+    
 }

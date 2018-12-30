@@ -83,4 +83,7 @@ class Pokestop {
         self.nom = nom
     }
 
+    func toString() -> String {
+        return "Pokestop : id -> \(self.id) / nom -> \(self.nom) / is_gym -> \(self.is_gym) / latitude -> \(self.latitude) / longitude -> \(self.longitude) / dresseur -> {\(self.dresseur.toString())}"
+    }
 }

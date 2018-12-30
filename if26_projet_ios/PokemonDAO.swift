@@ -67,8 +67,8 @@ class PokemonDAO: DataBaseHelper {
         var pokemon: Pokemon
         let query = super.POKEMON_TABLE.filter(DataBaseHelper.ID_POKEMON == id)
         do{
-            for item in try super.dataBase.prepare(query) {
-                pokemon = Pokemon.init(id: item[DataBaseHelper.ID_POKEMON], nom: item[DataBaseHelper.NOM_POKEMON])
+            for row in try super.dataBase.prepare(query) {
+                pokemon = Pokemon.init(id: row[DataBaseHelper.ID_POKEMON], nom: row[DataBaseHelper.NOM_POKEMON])
                 return pokemon
             }
         } catch {

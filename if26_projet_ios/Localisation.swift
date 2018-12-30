@@ -71,4 +71,8 @@ class Localisation {
     func setPokemon(pokemon: Pokemon) {
         self.pokemon = pokemon
     }
+    
+    func toString() -> String {
+        return "Localisation : id -> \(self.id) / time -> \(self.time) / pokestop -> {\(self.pokestop.toString())} / dresseur -> {\(self.dresseur.toString())} / pokemon -> {\(self.pokemon.toString())}"
+    }
 }

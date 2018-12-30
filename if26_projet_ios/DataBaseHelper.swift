@@ -31,8 +31,8 @@ class DataBaseHelper: NSObject {
     public static let ID_POKESTOP = Expression<Int>("id");
     public static let NOM_POKESTOP = Expression<String>("nom");
     public static let IS_GYM_POKESTOP = Expression<Bool>("is_gym");
-    public static let LATITUDE_POKESTOP = Expression<String>("latitude");
-    public static let LONGITUDE_POKESTOP = Expression<String>("longitude");
+    public static let LATITUDE_POKESTOP = Expression<Double>("latitude");
+    public static let LONGITUDE_POKESTOP = Expression<Double>("longitude");
     public static let ID_DRESSEUR_POKESTOP = Expression<Int>("dresseur_id");
     
     // nom colonnes table localisation :
@@ -51,6 +51,7 @@ class DataBaseHelper: NSObject {
             let fileUrl = documentDirectory.appendingPathComponent(DATABASE_NAME).appendingPathExtension("sqlite3")
             let base = try Connection(fileUrl.path)
             self.dataBase = base;
+            try dataBase.execute("PRAGMA foreign_keys = ON;")
         }catch {
             print (error)
         }

@@ -49,4 +49,8 @@ class Dresseur {
     func setPassword(password: String) {
         self.password = password
     }
+    
+    func toString() -> String {
+        return "Dresseur : id -> \(self.id) / pseudo -> \(self.pseudo) / mdp -> \(self.password)"
+    }
 }

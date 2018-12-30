@@ -13,10 +13,15 @@ import CoreLocation
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mMap: MKMapView!
+    let pokemonDAO = PokemonDAO.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // init data :
+        if pokemonDAO.getAllPokemon().count == 0 {
+            pokemonDAO.loadFirstGen()
+        }
         // Do any additional setup after loading the view.
     }
     

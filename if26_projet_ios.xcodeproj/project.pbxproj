@@ -12,6 +12,15 @@
 		0DDE2C1021B6CD7B00C70B7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DDE2C0F21B6CD7B00C70B7E /* Assets.xcassets */; };
 		0DDE2C1321B6CD7B00C70B7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DDE2C1121B6CD7B00C70B7E /* LaunchScreen.storyboard */; };
 		0DDE2C1B21C2B8CF00C70B7E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE2C1A21C2B8CF00C70B7E /* MapViewController.swift */; };
+		0DDE2C7921C942AC00C70B7E /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE2C7821C942AC00C70B7E /* DataBaseHelper.swift */; };
+		0DDE2C7B21C94CC200C70B7E /* DresseurDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE2C7A21C94CC200C70B7E /* DresseurDAO.swift */; };
+		0DDE2C7D21C94DD000C70B7E /* PokemonDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE2C7C21C94DD000C70B7E /* PokemonDAO.swift */; };
+		0DDE2C7F21C94DFE00C70B7E /* PokestopDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE2C7E21C94DFE00C70B7E /* PokestopDAO.swift */; };
+		0DDE2C8121C94E3400C70B7E /* LocalisationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE2C8021C94E3400C70B7E /* LocalisationDAO.swift */; };
+		0DDE2C8321C94EFA00C70B7E /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE2C8221C94EFA00C70B7E /* Pokemon.swift */; };
+		0DDE2C8521C94F1C00C70B7E /* Pokestop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE2C8421C94F1C00C70B7E /* Pokestop.swift */; };
+		0DDE2C8721C94F4A00C70B7E /* Dresseur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE2C8621C94F4A00C70B7E /* Dresseur.swift */; };
+		0DDE2C8921C94F6100C70B7E /* Localisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE2C8821C94F6100C70B7E /* Localisation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		0DDE2C1221B6CD7B00C70B7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DDE2C1421B6CD7B00C70B7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DDE2C1A21C2B8CF00C70B7E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0DDE2C7821C942AC00C70B7E /* DataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
+		0DDE2C7A21C94CC200C70B7E /* DresseurDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DresseurDAO.swift; sourceTree = "<group>"; };
+		0DDE2C7C21C94DD000C70B7E /* PokemonDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDAO.swift; sourceTree = "<group>"; };
+		0DDE2C7E21C94DFE00C70B7E /* PokestopDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokestopDAO.swift; sourceTree = "<group>"; };
+		0DDE2C8021C94E3400C70B7E /* LocalisationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalisationDAO.swift; sourceTree = "<group>"; };
+		0DDE2C8221C94EFA00C70B7E /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		0DDE2C8421C94F1C00C70B7E /* Pokestop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokestop.swift; sourceTree = "<group>"; };
+		0DDE2C8621C94F4A00C70B7E /* Dresseur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dresseur.swift; sourceTree = "<group>"; };
+		0DDE2C8821C94F6100C70B7E /* Localisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localisation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +78,15 @@
 				0DDE2C0F21B6CD7B00C70B7E /* Assets.xcassets */,
 				0DDE2C1121B6CD7B00C70B7E /* LaunchScreen.storyboard */,
 				0DDE2C1421B6CD7B00C70B7E /* Info.plist */,
+				0DDE2C7821C942AC00C70B7E /* DataBaseHelper.swift */,
+				0DDE2C7A21C94CC200C70B7E /* DresseurDAO.swift */,
+				0DDE2C7C21C94DD000C70B7E /* PokemonDAO.swift */,
+				0DDE2C7E21C94DFE00C70B7E /* PokestopDAO.swift */,
+				0DDE2C8021C94E3400C70B7E /* LocalisationDAO.swift */,
+				0DDE2C8221C94EFA00C70B7E /* Pokemon.swift */,
+				0DDE2C8421C94F1C00C70B7E /* Pokestop.swift */,
+				0DDE2C8621C94F4A00C70B7E /* Dresseur.swift */,
+				0DDE2C8821C94F6100C70B7E /* Localisation.swift */,
 			);
 			path = if26_projet_ios;
 			sourceTree = "<group>";
@@ -135,7 +162,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DDE2C7D21C94DD000C70B7E /* PokemonDAO.swift in Sources */,
+				0DDE2C8921C94F6100C70B7E /* Localisation.swift in Sources */,
+				0DDE2C8321C94EFA00C70B7E /* Pokemon.swift in Sources */,
 				0DDE2C1B21C2B8CF00C70B7E /* MapViewController.swift in Sources */,
+				0DDE2C7B21C94CC200C70B7E /* DresseurDAO.swift in Sources */,
+				0DDE2C7F21C94DFE00C70B7E /* PokestopDAO.swift in Sources */,
+				0DDE2C8521C94F1C00C70B7E /* Pokestop.swift in Sources */,
+				0DDE2C7921C942AC00C70B7E /* DataBaseHelper.swift in Sources */,
+				0DDE2C8121C94E3400C70B7E /* LocalisationDAO.swift in Sources */,
+				0DDE2C8721C94F4A00C70B7E /* Dresseur.swift in Sources */,
 				0DDE2C0921B6CD6400C70B7E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

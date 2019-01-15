@@ -27,7 +27,7 @@ class LocalisationDAO: DataBaseHelper {
     func getLocalisations(pokestop_id: Int) -> Array<Localisation> {
         var localisations: [Localisation] = []
         do{
-            for localisation in try super.dataBase.prepare(super.LOCALISATION_TABLE){
+            for localisation in try super.dataBase.prepare(super.LOCALISATION_TABLE.filter(DataBaseHelper.ID_POKESTOP_LOCALISATION == pokestop_id)){
                 let dresseurDAO = DresseurDAO.init()
                 let pokestopDAO = PokestopDAO.init()
                 let pokemonDAO = PokemonDAO.init()

@@ -105,12 +105,11 @@ class PokemonViewController: UIViewController{
         }
     }
     @objc func buttonAction(sender: UIButtonCustom!) {
-        sender.stackView.isHidden = true
-        sender.stackView.setNeedsDisplay()
+        
         let alert = UIAlertController(title: "Suppression d'un pokemon", message: "Voulez-vous supprimer ce Pokemon ?", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "ANNULER", style: UIAlertAction.Style.default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
-            sender.stackView.isHidden = false
+            //sender.stackView.isHidden = false
         }))
         
         alert.addAction(UIAlertAction(title: "OUI", style: UIAlertAction.Style.default, handler: { (action) in
@@ -118,7 +117,8 @@ class PokemonViewController: UIViewController{
             
             let localisationDAO:LocalisationDAO = LocalisationDAO()
             localisationDAO.delete(id: sender.localisationId)
-            
+            sender.stackView.isHidden = true
+            sender.stackView.setNeedsDisplay()
         }))
         
         self.present(alert, animated: true, completion: nil)
